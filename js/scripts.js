@@ -10,7 +10,7 @@ function pigLatinHandler(text) {
     } else {
       for (let i = 0; i < word.length; i++) {
         if (vowels.includes(word[i])) {
-          finalArray.push(word.slice(i, i + word.length) + word[i - 1] + "ay");
+          finalArray.push(word.replace(word[i - 1], "") + word[i - 1] + "ay");
           break;
         }
       }
